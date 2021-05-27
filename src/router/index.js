@@ -14,7 +14,10 @@ export default new Router({
     {
       path: '/index',
       name: 'AppIndex',
-      component: () => import('@/components/home/AppIndex')
+      component: () => import('@/components/home/AppIndex'),
+      meta: {
+        requireAuth: true
+      }
     }
   ]
 })
