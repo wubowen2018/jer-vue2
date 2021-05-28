@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import Vue from 'vue'
 import Vuex from 'vuex'
 
@@ -15,5 +16,5 @@ export default new Vuex.Store({
             window.localStorage.setItem('user', JSON.stringify(user))
         }
     }
-    
+
 })
