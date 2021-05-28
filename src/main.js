@@ -16,20 +16,21 @@ axios.defaults.baseURL = 'http://localhost:8443/api'
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 
-router.beforeEach((to, from, next) => {
-  if (to.meta.requireAuth) {
-    if (store.state.user.username) {
-      next()
-    } else {
-      next({
-        path: 'login',
-        query: { redirect: to.fullPath }
-      })
-    }
-  } else {
-    next()
-  }
-})
+//使用全局守卫做登录限制s
+// router.beforeEach((to, from, next) => {
+//   if (to.meta.requireAuth) {
+//     if (store.state.user.username) {
+//       next()
+//     } else {
+//       next({
+//         path: 'login',
+//         query: { redirect: to.fullPath }
+//       })
+//     }
+//   } else {
+//     next()
+//   }
+// })
 
 
 /* eslint-disable no-new */
