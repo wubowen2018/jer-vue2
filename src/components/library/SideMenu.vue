@@ -37,19 +37,19 @@
 </template>
 
 <script>
-/*eslint-disable*/
   export default {
     name: 'SideMenu',
-    data() {
-        return {
-            
-        }
+    data () {
+      return {
+        cid: ''
+      }
     },
     methods: {
-        handleSelect(index,selectIndex){
-            console.log(index,selectIndex);
-        }
-    },
+      handleSelect (key, keyPath) {
+        this.cid = key
+        this.$emit('indexSelect')
+      }
+    }
   }
 </script>
 
