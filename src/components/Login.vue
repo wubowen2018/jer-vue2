@@ -27,7 +27,7 @@ export default {
     return {
 			loginForm:{
 				username: 'admin',
-				password: '123456'
+				password: '123'
 			},
 			responseResult: []    
     };
@@ -58,15 +58,15 @@ export default {
           password: this.loginForm.password
         })
         .then(successResponse => {
+          console.log(successResponse.data.code);
           if (successResponse.data.code === 200) {
-            // var data = this.loginForm
             _this.$store.commit('login', _this.loginForm)
             var path = this.$route.query.redirect
             this.$router.replace({path: path === '/' || path === undefined ? '/index' : path})
           }
         })
         .catch(failResponse => {
-          
+      
           console.log(failResponse);
         })
     }
@@ -101,7 +101,7 @@ export default {
   }
   
   .login_title {
-    margin: 0px auto 40px auto;
+    margin: 0px auto 40px;
     text-align: center;
     color: #505458;
   }

@@ -16,7 +16,7 @@ axios.defaults.baseURL = 'http://localhost:8443/api'
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 
-//使用全局守卫做登录限制s
+//使用全局守卫做登录限制
 // router.beforeEach((to, from, next) => {
 //   if (to.meta.requireAuth) {
 //     if (store.state.user.username) {
